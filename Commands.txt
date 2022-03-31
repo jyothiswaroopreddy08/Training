@@ -1,0 +1,15 @@
+Git Commands....
+1. git init - which will initializes/creates a git repository
+2. git remote add origin <github_Url> - used to add a remote repository
+3. git clone - which will copy the git repository to the local repository
+4. git status - displays the state of working directory and staged changes
+5. git add - select the changes made in repository and add them to staging area
+6. git commit - save the changes in the staging area
+7. git push - used to upload local repo files/content to the remote repo
+8. git pull - pulls the changes in the remote repo and merges them with the local repository
+9. git fetch - it fetches the updates but doesn't merge them with local repository
+10. git merge - connect the changes in branches and put them together
+11. git checkout - helps to navigate between the branches created
+12. git branch - helps to create, list and delete the branches
+13. git rm - to remove a file from git repository
+14. 

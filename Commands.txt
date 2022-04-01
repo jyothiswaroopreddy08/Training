@@ -1,6 +1,6 @@
 Git Commands....
 1. git init - which will initializes/creates a git repository
-2. git remote add origin <github_Url> - used to add a remote repository
+2. git remote add <remote-name> <github_Url> - used to add a remote repository
 3. git clone - which will copy the git repository to the local repository
 4. git status - displays the state of working directory and staged changes
 5. git add - select the changes made in repository and add them to staging area
@@ -12,4 +12,5 @@ Git Commands....
 11. git checkout - helps to navigate between the branches created
 12. git branch - helps to create, list and delete the branches
 13. git rm - to remove a file from git repository
-14. 
+14. git log - displays all the commits
+15. git stash - save uncommitted changes locally

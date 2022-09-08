@@ -1,0 +1,54 @@
+<!doctype hhtml>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+  <p>Hello</p>
+  <script>
+    let saveFile = () => {
+
+      // Get the data from each element on the form.
+
+      const Techstack = document.getElementById('Techstack');
+      const Sonarqube = document.getElementById('Sonarqube');
+      const Docker = document.getElementById('Docker');
+      const GitUrl = document.getElementById('GitUrl');
+      const GitBranch = document.getElementById('GitBranch');
+
+      // This varible stores all the data.
+
+      let data = 
+      '\r Techstack: ' + Techstack.value + '\r\n' +
+      'Docker: ' + Docker.value + '\r\n' +
+      'Sonarqube: ' + Sonarqube.value + '\r\n' +
+      'GitUrl: ' + GitUrl.value + '\r\n' +
+      'GitBranch: ' + GitBranch.value;
+
+      // Convert the text to BLOB.
+
+      const textToBLOB = new Blob([data], { type: 'text/plain' });
+      const sFileName = 'configuration.yaml' ;
+
+      let newLink = document.createElement("a");
+      newLink.download = sFileName;
+
+      if (window.webkitURL != null) {
+        newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+      }
+      else {
+        newLink.href = window.URL.createObjectURL(textToBLOB);
+        newLink.style.display = "none";
+        document.body.appendChild(newLink);
+      }
+
+      newLink.click();
+      window.location.href = GitUrl.value + '/tree' + GitBranch.value;
+
+    }
+  </script>
+  <!-- <app-root> </app-root> -->
+</html>

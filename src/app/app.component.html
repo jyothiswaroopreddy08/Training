@@ -1,0 +1,39 @@
+<body>
+  <h1>Enter configuration details</h1>
+  <form>
+    <div>Tech Stack : <select name="Test Stack" id="Techstack" required>
+        <option value="" hidden>Select an option</option>
+        <option value="Java">Java</option>
+        <option value="DotNet">DotNet</option>
+        <option value="Python">Python</option>
+        <option value="Angular">Angular</option>
+      </select>
+    </div>
+    <div>Sonarqube : <select name="Sonarqube" id="Sonarqube" required>
+        <option value="" hidden>Select an option</option>>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select></div>
+
+    <div>Docker : <select name="Docker" id="Docker" required>
+        <option value="" hidden>Select an option</option>>
+        <option value="True">True</option>
+        <option value="False">False</option>
+      </select></div>
+
+    <div>
+      <label>Github Url</label>
+      <textarea id="GitUrl" name="GitUrl" placeholder="Enter Github Repo url/Path"></textarea>
+    </div>
+
+    <div>
+      <label>Git Branch</label>
+      <textarea id="GitBranch" name="GitBranch" placeholder="Enter branch name"></textarea>
+    </div>
+
+    <div>
+      <input type="button" id="bt" value="Commit to Github" onClick="saveFile()" />
+    </div>
+  </form>
+</body>
+<app-root></app-root>
